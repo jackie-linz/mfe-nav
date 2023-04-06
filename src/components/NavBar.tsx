@@ -1,24 +1,27 @@
 import { Link } from "react-router-dom";
 import React from "react";
+import "./NavBar.css";
 
-// const Button = React.lazy(() => import('app1/Button'));
-
-const App: React.FC = () => {
+const NavBar: React.FC = () => {
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/page1">Page 1</Link>
-        </li>
-        <li>
-          <Link to="/app1">App 1</Link>
-        </li>
-      </ul>
-    </nav>
+    <header className="nav-wrapper">
+      <div className="nav left">Landonline</div>
+      <div className="nav right">
+        {/* <Link to="/" className="nav-link">
+          Home
+        </Link> */}
+        <Link to="/page1" className="nav-link">
+          Page 1
+        </Link>
+        <Link to="/app1" className="nav-link">
+          App 1
+        </Link>
+        <Link to="/cra" className="nav-link">
+          CRA
+        </Link>
+      </div>
+    </header>
   );
 };
 
-export default App;
+export default NavBar;
